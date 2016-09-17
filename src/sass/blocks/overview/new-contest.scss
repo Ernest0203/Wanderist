@@ -1,0 +1,38 @@
+.contest {
+  color: #3d380a;
+  padding: 40px 0 100px;
+  text-align: center;
+  &__title {
+    font-size: 20px;
+    margin: 25px 0;
+  }
+  &__desc {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+  a {
+    color: #3d380a;
+    display: inline-block;
+    text-transform: uppercase;
+  }
+  &__btn-new-contest {
+    background-color: #ffdf06;
+    border-radius: 5px;
+    border-bottom: 2px solid #dfc40a;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 30px;
+    position: relative;
+    @media(max-width: 435px) {
+      margin-bottom: 15px;
+    }
+    &:active {
+      border: none;
+      bottom: -2px;
+    }
+  }
+  &__btn-learn-more {
+    border-bottom: 1px solid #3d380a;
+    margin-left: 25px;
+  }
+}

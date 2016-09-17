@@ -1,0 +1,105 @@
+.header {
+  background-color: #c8b485;
+  @include make-row();
+  padding-left: 70px;
+             
+  &__pages {
+    @include pull-left();
+    @media(max-width: 645px) {
+      @include make-col(12);
+    }
+    .overview-btn, .details-btn {
+      @include pull-left();
+      border-right: 1px solid #bba87b;
+      color: $color-header;
+      display: block;
+      font-size: 18px;
+      height: 60px;
+      line-height: 60px;
+      padding: 0 25px 0 50px;
+      position: relative;
+      
+      &:before {
+        content: '';
+        display: block;
+        height: 14px;
+        width: 20px;
+        position: absolute;
+        top: 23px;
+        left: 23px;
+      }
+      @media(max-width: 645px) {
+        @include make-col(6);
+        padding: 0;
+        text-align: center;
+        &:before {
+          left: 25%;
+        }
+      }
+      @media(max-width: 560px) {
+        &:before {
+          left: 10%;
+        }
+      }
+      @media(max-width: 370px) {
+        padding-left: 25px;
+      }
+    }
+    .overview-btn{
+      border-left: 1px solid #bba87b;
+      &:before {
+        background-image: url('../images/icons/sprite-overview.png');
+        background-position: 100% 0;
+      }
+    }
+    .details-btn{
+      &:before {
+        background-image: url('../images/icons/sprite-overview.png');
+        background-position: 45% 85%;
+        height: 16px;
+      }
+    }
+  }
+  .active {
+    background-color: #d4c296;
+    font-family: $font-bold;
+  }
+  
+  &__share {
+    float: right;
+    height: 60px;
+    line-height: 60px;
+    @media(max-width: 645px) {
+      display: none;
+    }
+    span {
+      margin-right: 25px;
+    }
+    a {
+      background-color: $color-header;
+      float: right;
+      display: block;
+      border-radius: 6px;
+      height: 35px;
+      width: 35px;
+      margin: 12px 20px 0 0;
+      text-align: right;
+      position: relative;
+      &:hover {
+        background-color: #fff;
+      }
+      i {
+        color: #c8b485;
+        position: absolute;
+        bottom: -3px;
+        right: 3px;
+      }
+    }
+    .tw {
+      i {
+        font-size: 28px;
+        bottom: 2px;
+      }
+    }
+  }
+}

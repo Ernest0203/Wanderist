@@ -1,0 +1,193 @@
+!!!5
+%html
+  %head
+    %meta(charset="UTF-8")
+    %meta(name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0")
+    %title Test
+    %link{:rel => "stylesheet", :href => "css/main.css"}
+  %body
+    = Haml::Engine.new(File.read('menu.haml')).render
+        
+    .container
+      = Haml::Engine.new(File.read('page_header.haml')).render
+            
+      %section.trip-banner
+        .center-wrapper
+          %p.itinerary Itinerary
+          %h2.trip-banner__title Trip to Fabulous Las Vegas
+          .trip-baner__tags
+            %span 2 Days
+            %ul.trip-banner__list
+              %li.trip-banner__item
+                %a{:href => ""} 
+                  family
+              %li.trip-banner__item
+                %a{:href => ""}
+                  foodie
+              %li.trip-banner__item
+                %a{:href => ""}
+                  shopping
+              %li.trip-banner__item
+                %a{:href => ""}
+                  pet frienly
+      
+      %section.overview
+        .center-wrapper
+          .overview__expert
+            .overview__expert-profile
+              %img.overview__expert-avatar{:src => "images/expert-avatar.png", :alt => ""}/
+              %h6.overview__expert-title Local Expert
+              %p.overview__expert-name Audrey Tautou
+              %img.overview__expert-rating{:src => "images/expert-rating.png", :alt => ""}/
+            %ul.overview__expert-grade
+              %li.overview__expert-grade-value
+                %span.left-value Buget
+                %span.scale 
+                %span.right-value Luxury
+              %li.overview__expert-grade-value
+                %span.left-value Relaxed
+                %span.scale 
+                %span.right-value Active
+              %li.overview__expert-grade-value
+                %span.left-value Desolate
+                %span.scale 
+                %span.right-value Crowdy
+          .overview__content
+            %h6.overview__content-title Overview
+            %p.overview__content-text
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
+              %br/
+              Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus... ut, vehicula eu diam. 
+              %br/
+              Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
+            %a.view-more{:href => ""}
+              %i.fa.fa-angle-down
+              
+      .center-wrapper      
+        %section.accordion
+          %a.accordion__toggler.accordion__toggler--active{:href => ""}
+            %span Day 1
+          .accordion__item.accordion__item--active
+            .left-col
+              .place-item
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7948082.787157365!2d-113.01632812769546!3d35.1208234653223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80beb782a4f57dd1%3A0x3accd5e6d5b379a3!2z0JvQsNGBLdCS0LXQs9Cw0YEsINCd0LXQstCw0LTQsCwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1474023878580" frameborder="0" style="border:0" allowfullscreen></iframe>
+              .place-item
+                %img.place-item__picture{:src => "images/accordion/item2.jpg", :alt => ""}/
+                %div.place-item__desc 
+                  %p
+                    Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia
+                  %a.btn-show-on-map{:href => ""}
+                    %span
+                      %i.fa.fa-map-marker
+                      Show on the map
+                
+            .right-col
+              .place-item
+                %img.place-item__picture{:src => "images/accordion/item1.jpg", :alt => ""}/
+                %div.place-item__desc 
+                  %p
+                    Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. 
+                  %a.btn-show-on-map{:href => ""}
+                    %span
+                      %i.fa.fa-map-marker
+                      Show on the map
+                
+              .place-item
+                %img.place-item__picture{:src => "images/accordion/item3.jpg", :alt => ""}/
+                %div.place-item__desc 
+                  %p
+                    Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. 
+                  %a.btn-show-on-map{:href => ""}
+                    %span
+                      %i.fa.fa-map-marker
+                      Show on the map
+          %a.accordion__toggler{:href => ""}
+            %span Day 2
+          .accordion__item
+            .left-col
+              .place-item
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7948082.787157365!2d-113.01632812769546!3d35.1208234653223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80beb782a4f57dd1%3A0x3accd5e6d5b379a3!2z0JvQsNGBLdCS0LXQs9Cw0YEsINCd0LXQstCw0LTQsCwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1474023878580" frameborder="0" style="border:0" allowfullscreen></iframe>
+                
+              .place-item
+                %img.place-item__picture{:src => "images/accordion/item2.jpg", :alt => ""}/
+                %div.place-item__desc 
+                  %p
+                    Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia
+                  %a.btn-show-on-map{:href => ""}
+                    %span
+                      %i.fa.fa-map-marker
+                      Show on the map
+                
+            .right-col
+              .place-item
+                %img.place-item__picture{:src => "images/accordion/item1.jpg", :alt => ""}/
+                %div.place-item__desc 
+                  %p
+                    Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. 
+                  %a.btn-show-on-map{:href => ""}
+                    %span
+                      %i.fa.fa-map-marker
+                      Show on the map
+                
+              .place-item
+                %img.place-item__picture{:src => "images/accordion/item3.jpg", :alt => ""}/
+                %div.place-item__desc 
+                  %p
+                    Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. 
+                  %a.btn-show-on-map{:href => ""}
+                    %span
+                      %i.fa.fa-map-marker
+                      Show on the map
+                
+          %a.accordion__toggler{:href => ""}
+            %span Day 3
+          .accordion__item
+            .left-col
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7948082.787157365!2d-113.01632812769546!3d35.1208234653223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80beb782a4f57dd1%3A0x3accd5e6d5b379a3!2z0JvQsNGBLdCS0LXQs9Cw0YEsINCd0LXQstCw0LTQsCwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1474023878580" frameborder="0" style="border:0" allowfullscreen></iframe>
+                
+              .place-item
+                %img.place-item__picture{:src => "images/accordion/item2.jpg", :alt => ""}/
+                %div.place-item__desc 
+                  %p
+                    Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia
+                  %a.btn-show-on-map{:href => ""}
+                    %span
+                      %i.fa.fa-map-marker
+                      Show on the map
+                
+            .right-col
+              .place-item
+                %img.place-item__picture{:src => "images/accordion/item1.jpg", :alt => ""}/
+                %div.place-item__desc 
+                  %p
+                    Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. 
+                  %a.btn-show-on-map{:href => ""}
+                    %span
+                      %i.fa.fa-map-marker
+                      Show on the map
+                
+              .place-item
+                %img.place-item__picture{:src => "images/accordion/item3.jpg", :alt => ""}/
+                %div.place-item__desc 
+                  %p
+                    Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. 
+                  %a.btn-show-on-map{:href => ""}
+                    %span
+                      %i.fa.fa-map-marker
+                      Show on the map
+                        
+        %section.contest
+          %img.contest__image{:src => "images/contest-image.png", :alt => ""}/
+          %h4.contest__title Love this itinerary
+          %p.contest__desc 
+            Use it to create a ne contest and local experts
+            %br/ 
+            will get a better sense of the trip you want
+          %a.contest__btn-new-contest{:href => ""} Create a new contest
+          %a.contest__btn-learn-more{:href => ""} Learn More
+            
+            
+      = Haml::Engine.new(File.read('page_footer.haml')).render
+      
+    %script{:src => "js/menu.js"}
+    %script{:src => "js/overview.js"}

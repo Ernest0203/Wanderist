@@ -1,0 +1,88 @@
+!!!5
+%html
+  %head
+    %meta(charset="UTF-8")
+    %meta(name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0")
+    %title Test
+    %link{:rel => "stylesheet", :href => "css/main.css"}
+  %body
+    = Haml::Engine.new(File.read('menu.haml')).render
+        
+    .container
+      = Haml::Engine.new(File.read('page_header.haml')).render
+      
+      %main.main
+        .details-content-wrapper
+          %a.details-content__toggler{:href => ""}
+            %i.fa.fa-chevron-right
+          .details-content
+            .date-nav
+              %a.date-nav__prev-date{:href => ""}
+                %i.fa.fa-chevron-left
+              %a.date-nav__next-date{:href => ""}
+                %i.fa.fa-chevron-right
+              %ul.date-nav__date-list
+                %li.date-nav__date Jun 24
+                %li.date-nav__date Jun 25
+                %li.date-nav__date Jun 26
+              
+            %ul.entertainment-list
+              %li.entertainment-list__item
+                .entertainment-list__item-header
+                  %img.entertainment-list__item-icon{:src => "images/icons/food-icon.png", :alt => ""}/     
+                  %a.entertainment-list__item-name{:href => ""}
+                    Trattoria Da Ropeton
+                    %span.entertainment-list__item-open 10.00 
+                  %p.entertainment-list__item-adress Via Fontana del Ferro, 1, Verona, Italy
+                .entertainment-list__item-desc
+                  .picture
+                    %img{:src => "images/entertaiment-item.png", :alt => ""}/
+                  %p.desc 
+                    Amazing owner who sings and serves the food himself! Experience which you'll never forget and will include to the travel different mockups :)
+                %a.entertainment-list__view-more{:href => ""}
+                  %i.fa.fa-angle-up
+                  
+              %li.transport-icons
+                %i.fa.fa-taxi
+              
+              %li.entertainment-list__item
+                .entertainment-list__item-header
+                  %img.entertainment-list__item-icon{:src => "images/icons/food-icon.png", :alt => ""}/     
+                  %a.entertainment-list__item-name{:href => ""}
+                    Trattoria Da Ropeton
+                    %span.entertainment-list__item-open 10.00 
+                  %p.entertainment-list__item-adress Via Fontana del Ferro, 1, Verona, Italy
+                .entertainment-list__item-desc.entertainment-list__item-desc-hide
+                  .picture
+                    %img{:src => "images/entertaiment-item.png", :alt => ""}/
+                  %p.desc 
+                    Amazing owner who sings and serves the food himself! Experience which you'll never forget and will include to the travel different mockups :)
+                %a.entertainment-list__view-more.entertainment-list__view-more-hide{:href => ""}
+                  %i.fa.fa-angle-up
+                 
+              %li.transport-icons
+                %i.fa.fa-taxi
+              
+              %li.entertainment-list__item
+                .entertainment-list__item-header
+                  %img.entertainment-list__item-icon{:src => "images/icons/food-icon.png", :alt => ""}/     
+                  %a.entertainment-list__item-name{:href => ""} 
+                    Trattoria Da Ropeton
+                    %span.entertainment-list__item-open 10.00 
+                  %p.entertainment-list__item-adress Via Fontana del Ferro, 1, Verona, Italy
+                .entertainment-list__item-desc.entertainment-list__item-desc-hide
+                  .picture
+                    %img{:src => "images/entertaiment-item.png", :alt => ""}/
+                  %p.desc 
+                    Amazing owner who sings and serves the food himself! Experience which you'll never forget and will include to the travel different mockups :)
+                %a.entertainment-list__view-more.entertainment-list__view-more-hide{:href => ""}
+                  %i.fa.fa-angle-up
+        
+        .iframe-wrapper
+          %iframe{:src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1176.8867175270364!2d11.004086438916788!3d45.44715496373374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477f5f3519d83057%3A0xc032493cc166340d!2sTrattoria+Da+Ropeton!5e0!3m2!1sru!2sua!4v1473877342165", :frameborder => "0"}
+                    
+        = Haml::Engine.new(File.read('page_footer.haml')).render
+          
+    %script{:src => "js/menu.js"}
+    %script{:src => "js/details.js"}
+    
